@@ -515,6 +515,8 @@ CFLAGS = $(CFLAGS) /Zl /MTd
 ! endif
 !endif # DEBUG
 
+LIBC=msvcrt.lib
+
 INCL =	vim.h os_win32.h ascii.h feature.h globals.h keymap.h macros.h \
 	proto.h option.h structs.h term.h $(CSCOPE_INCL) \
 	$(NBDEBUG_INCL)
@@ -679,7 +681,7 @@ TCL_LIB = "$(TCL)\lib\tclstub$(TCL_VER).lib"
 CFLAGS  = $(CFLAGS) -DFEAT_TCL
 TCL_OBJ	= $(OUTDIR)\if_tcl.obj
 TCL_INC	= /I "$(TCL)\Include" /I "$(TCL)"
-TCL_LIB = $(TCL)\lib\tcl$(TCL_VER)vc.lib
+TCL_LIB = $(TCL)\lib\tcl$(TCL_VER).lib
 !endif
 !endif
 
